@@ -1,0 +1,10 @@
+nest new <APP_NAME>
+
+
+nest generate resource <NAME>
+nest generate resource <NAME> --no-spec //без тестов
+nest g reso <NAME> --no-spec
+
+yarn run start:dev
+
+yarn add class-validator class-transformer
