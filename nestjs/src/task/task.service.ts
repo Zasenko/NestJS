@@ -36,7 +36,10 @@ export class TaskService {
         const newTask = {
             id: this.tasks.length + 1,
             title: dto.title,
-            isComplited: false
+            description: dto.description,
+            isComplited: false,
+            priority: dto.priority,
+            tags: dto.tags
         }
 
         this.tasks.push(newTask);
@@ -56,6 +59,9 @@ export class TaskService {
 
     patchTask(id: number, dto: Partial<UpdateTaskDTO>) {
         const task = this.findById(id);
+        // if (dto.title !== undefined) {
+        //     task.title = dto.title;
+        // }
         Object.assign(task, dto);
         return task;
     }
