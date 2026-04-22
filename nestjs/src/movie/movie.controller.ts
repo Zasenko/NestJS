@@ -7,6 +7,5 @@ export class MovieController {
   
   @Get()
   async test() {
-    return this.movieService.test();
   }
 }
