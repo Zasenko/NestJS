@@ -1,5 +1,6 @@
 import { IsArray, IsEnum, IsInt, IsNotEmpty, IsNumber, IsOptional, IsPositive, IsString, IsUrl, IsUUID, Length, Matches, MinLength } from "class-validator";
 import { Url } from "url";
+import { StartWith } from "../decorator/start-with.decorator";
 
 export enum TaskTag {
     WORK = 'work',
@@ -14,6 +15,8 @@ export class CreateTaskDTO {
     @Length(5, 10)
     // @IsString({ message: 'Название задачи должно быть строкой' })
     // @Length(5, 10, { message: 'Название задачи должно быть строкой от 5 до 10 символов' })
+    @StartWith('Task:', { message: 'Невалидно имя задания' })
+    // @StartWith('Task:')
     title: string;
 
     @IsString()
