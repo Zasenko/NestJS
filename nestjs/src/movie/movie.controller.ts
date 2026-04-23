@@ -13,7 +13,7 @@ export class MovieController {
 
   @Get(':id') // http://localhost:3000/movies/10
   findById(@Param('id') id: string) {
-    return this.movieService.findById(+id);
+    return this.movieService.findById(id);
   }
 
   @Post() // http://localhost:3000/movies
@@ -23,11 +23,11 @@ export class MovieController {
 
   @Put(':id')
   update(@Param('id') id: string, @Body() dto: MovieDto) {
-    return this.movieService.update(+id, dto);
+    return this.movieService.update(id, dto);
   }
 
   @Delete(':id')
   delete(@Param('id') id: string,) {
-    return this.movieService.delete(+id);
+    return this.movieService.delete(id);
   }
 }
