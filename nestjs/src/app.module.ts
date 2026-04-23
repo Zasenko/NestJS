@@ -5,6 +5,8 @@ import { MovieModule } from './movie/movie.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { getTypeOrmConfig } from './config/typeorm.config'
+import { ReviewModule } from './review/review.module';
+import { ActorModule } from './actor/actor.module';
 // -----  .env
 //process.env['POSTGRES_HOST']
 //process.env.POSTGRES_HOST
@@ -20,6 +22,8 @@ import { getTypeOrmConfig } from './config/typeorm.config'
       inject: [ConfigService],
     }),
     MovieModule,
+    ReviewModule,
+    ActorModule,
   ],
   controllers: [AppController],
   providers: [AppService],
