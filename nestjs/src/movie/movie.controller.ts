@@ -6,28 +6,28 @@ import { MovieDto } from './dto/movie.dto';
 export class MovieController {
   constructor(private readonly movieService: MovieService) { }
   
-  @Get() // http://localhost:3000/movies
-  findAll() {
-    return this.movieService.findAll();
-  }
+  // @Get() // http://localhost:3000/movies
+  // findAll() {
+  //   return this.movieService.findAll();
+  // }
 
-  @Get(':id') // http://localhost:3000/movies/10
-  findById(@Param('id') id: string) {
-    return this.movieService.findById(id);
-  }
+  // @Get(':id') // http://localhost:3000/movies/10
+  // findById(@Param('id') id: string) {
+  //   return this.movieService.findById(id);
+  // }
 
-  @Post() // http://localhost:3000/movies
-  create(@Body() dto: MovieDto) {
-    return this.movieService.create(dto);
-  }
+  // @Post() // http://localhost:3000/movies
+  // create(@Body() dto: MovieDto) {
+  //   return this.movieService.create(dto);
+  // }
 
-  @Put(':id')
-  update(@Param('id') id: string, @Body() dto: MovieDto) {
-    return this.movieService.update(id, dto);
-  }
+  // @Put(':id')
+  // update(@Param('id') id: string, @Body() dto: MovieDto) {
+  //   return this.movieService.update(id, dto);
+  // }
 
-  @Delete(':id')
-  delete(@Param('id') id: string,) {
-    return this.movieService.delete(id);
-  }
+  // @Delete(':id')
+  // delete(@Param('id') id: string,) {
+  //   return this.movieService.delete(id);
+  // }
 }
